@@ -21,7 +21,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:1re
 .hero-left h1 span{color:var(--teal);text-shadow:0 0 24px rgba(0,229,200,0.6);}
 .hero-left p{font-size:15px;color:var(--muted);line-height:1.75;max-width:440px;margin-bottom:2rem;}
 .counter-block{display:flex;align-items:center;gap:14px;background:rgba(0,229,200,0.05);border:1px solid rgba(0,229,200,0.2);border-radius:12px;padding:14px 20px;margin-bottom:1.5rem;max-width:360px;}
-.label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:3px;}
+.clabel{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:3px;}
 .count-row{display:flex;align-items:baseline;gap:8px;}
 #member-count{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#00e5c8;line-height:1;}
 .count-sub{font-size:11px;color:rgba(0,229,200,0.5);letter-spacing:1px;}
@@ -92,18 +92,16 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
     <div class="hero-left">
       <h1>A <span>Smarter</span> Way To<br>Build Your<br>Parlays</h1>
       <p>Get early access to SafeParlay, the crypto powered parlay platform built for real players. Secure your spot before launch.</p>
-
       <div class="counter-block">
         <div class="pulse-dot"></div>
         <div>
-          <div class="label">Members Signed Up</div>
+          <div class="clabel">Members Signed Up</div>
           <div class="count-row">
             <span id="member-count">0</span>
             <span class="count-sub">and growing</span>
           </div>
         </div>
       </div>
-
       <div class="cd-label">Launching in</div>
       <div class="countdown">
         <div class="cd-block"><div class="cd-num" id="cd-days">00</div><div class="cd-unit">Days</div></div>
@@ -112,7 +110,6 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
         <div class="cd-block"><div class="cd-num" id="cd-secs">00</div><div class="cd-unit">Secs</div></div>
       </div>
     </div>
-
     <div class="coin-visual">
       <div class="ring ring3"></div>
       <div class="ring ring2"></div>
@@ -222,63 +219,42 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
   <a href="mailto:team@safeparlay.io" style="display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 36px;border-radius:10px;text-decoration:none;">Email Us &rarr;</a>
 </div>
 
-<footer>
-  &copy; 2026 SafeParlay. All rights reserved. &bull; Built for early members.
-</footer>
+<footer>&copy; 2026 SafeParlay. All rights reserved. &bull; Built for early members.</footer>
 
 <script>
-var SUPABASE_URL = 'https://kcziamysopdhmbvcdozq.supabase.co';
-var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtjemlhbXlzb3BkaG1idmNkb3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM4NzYzNzYsImV4cCI6MjA1OTQ1MjM3Nn0.HKUGFTiGSaEBHQJUUYOBOIYkM5V2E0v_8JxaEosBIaU';
+var SUPA_URL = 'https://kcziamysopdhmbvcdozq.supabase.co';
+var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtjemlhbXlzb3BkaG1idmNkb3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM4NzYzNzYsImV4cCI6MjA1OTQ1MjM3Nn0.HKUGFTiGSaEBHQJUUYOBOIYkM5V2E0v_8JxaEosBIaU';
 
-// COUNTDOWN TIMER
-function pad(n) { return String(n).padStart(2, '0'); }
+function pad(n) { return String(n).padStart(2,'0'); }
 
 function updateCountdown() {
-  var launch = new Date('April 30, 2026 00:00:00');
+  var launch = new Date('2026-04-30T00:00:00');
   var now = new Date();
-  var diff = launch.getTime() - now.getTime();
-  if (diff <= 0) {
-    document.getElementById('cd-days').textContent = '00';
-    document.getElementById('cd-hours').textContent = '00';
-    document.getElementById('cd-mins').textContent = '00';
-    document.getElementById('cd-secs').textContent = '00';
-    return;
-  }
-  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  var secs = Math.floor((diff % (1000 * 60)) / 1000);
-  document.getElementById('cd-days').textContent = pad(days);
-  document.getElementById('cd-hours').textContent = pad(hours);
-  document.getElementById('cd-mins').textContent = pad(mins);
-  document.getElementById('cd-secs').textContent = pad(secs);
+  var diff = launch - now;
+  if (diff <= 0) { return; }
+  document.getElementById('cd-days').textContent = pad(Math.floor(diff/86400000));
+  document.getElementById('cd-hours').textContent = pad(Math.floor((diff%86400000)/3600000));
+  document.getElementById('cd-mins').textContent = pad(Math.floor((diff%3600000)/60000));
+  document.getElementById('cd-secs').textContent = pad(Math.floor((diff%60000)/1000));
 }
-
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// MEMBER COUNTER
-async function updateMemberCount() {
-  try {
-    var res = await fetch(SUPABASE_URL + '/rest/v1/signups?select=id', {
-      headers: {
-        'apikey': SUPABASE_KEY,
-        'Authorization': 'Bearer ' + SUPABASE_KEY
-      }
-    });
-    if (res.ok) {
-      var data = await res.json();
-      document.getElementById('member-count').textContent = data.length.toLocaleString();
-    }
-  } catch(e) {
+function updateMemberCount() {
+  fetch(SUPA_URL + '/rest/v1/signups?select=id', {
+    headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY }
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    document.getElementById('member-count').textContent = data.length.toLocaleString();
+  })
+  .catch(function() {
     document.getElementById('member-count').textContent = '0';
-  }
+  });
 }
-
 updateMemberCount();
 setInterval(updateMemberCount, 30000);
 
-// FORM SUBMIT
 async function submitForm() {
   var fname = document.getElementById('f-fname').value.trim();
   var lname = document.getElementById('f-lname').value.trim();
@@ -305,36 +281,38 @@ async function submitForm() {
   btn.disabled = true;
 
   try {
-    var dbRes = await fetch(SUPABASE_URL + '/rest/v1/signups', {
+    var body = {
+      first_name: fname,
+      last_name: lname,
+      email: email,
+      username: user,
+      timezone: tz,
+      country: country,
+      crypto_wallet: wallet,
+      how_use_safeparlay: usage,
+      age_confirmed: true
+    };
+    if (referral) { body.referred_by = referral; }
+
+    var dbRes = await fetch(SUPA_URL + '/rest/v1/signups', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'apikey': SUPABASE_KEY,
-        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'apikey': SUPA_KEY,
+        'Authorization': 'Bearer ' + SUPA_KEY,
         'Prefer': 'return=minimal'
       },
-      body: JSON.stringify({
-        first_name: fname,
-        last_name: lname,
-        email: email,
-        username: user,
-        timezone: tz,
-        country: country,
-        crypto_wallet: wallet,
-        how_use_safeparlay: usage,
-        age_confirmed: true,
-        referred_by: referral
-      })
+      body: JSON.stringify(body)
     });
     if (!dbRes.ok) { console.error('DB error:', await dbRes.text()); }
   } catch(e) { console.error('DB error:', e); }
 
   try {
-    await fetch(SUPABASE_URL + '/functions/v1/send-welcome-email', {
+    await fetch(SUPA_URL + '/functions/v1/send-welcome-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + SUPABASE_KEY
+        'Authorization': 'Bearer ' + SUPA_KEY
       },
       body: JSON.stringify({ email: email, first_name: fname })
     });
