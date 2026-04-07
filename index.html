@@ -337,18 +337,13 @@ async function submitForm(){
       + '<p style="color:rgba(228,238,240,0.15);font-size:11px;">You are receiving this because you reserved your spot on safeparlay.io</p>'
       + '</div></div>';
 
-    await fetch('https://api.resend.com/emails', {
+    await fetch('https://kcziamysopdhmbvcdozq.supabase.co/functions/v1/send-welcome-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + RESEND_KEY
+        'Authorization': 'Bearer ' + SUPABASE_KEY
       },
-      body: JSON.stringify({
-        from: 'SafeParlay <noreply@safeparlay.io>',
-        to: [email],
-        subject: 'You are In - Welcome to SafeParlay!',
-        html: emailBody
-      })
+      body: JSON.stringify({email: email, firstName: fname})
     });
   } catch(e){
     console.error('Email error:', e);
