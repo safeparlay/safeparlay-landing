@@ -21,17 +21,17 @@ header{display:flex;align-items:center;justify-content:space-between;padding:1re
 .hero-left h1 span{color:var(--teal);text-shadow:0 0 24px rgba(0,229,200,0.6);}
 .hero-left p{font-size:15px;color:var(--muted);line-height:1.75;max-width:440px;margin-bottom:2rem;}
 .counter-block{display:flex;align-items:center;gap:14px;background:rgba(0,229,200,0.05);border:1px solid rgba(0,229,200,0.2);border-radius:12px;padding:14px 20px;margin-bottom:1.5rem;max-width:360px;}
-.counter-inner .label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:3px;}
-.counter-inner .count-row{display:flex;align-items:baseline;gap:8px;}
-#member-count{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#00e5c8;text-shadow:0 0 12px rgba(0,229,200,0.5);line-height:1;}
+.label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:3px;}
+.count-row{display:flex;align-items:baseline;gap:8px;}
+#member-count{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#00e5c8;line-height:1;}
 .count-sub{font-size:11px;color:rgba(0,229,200,0.5);letter-spacing:1px;}
 .cd-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:0.6rem;}
 .countdown{display:flex;gap:10px;margin-bottom:2.5rem;}
 .cd-block{text-align:center;background:rgba(0,229,200,0.05);border:1px solid rgba(0,229,200,0.2);border-radius:10px;padding:12px 16px;min-width:68px;}
-.cd-num{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--teal);line-height:1;text-shadow:0 0 12px rgba(0,229,200,0.5);}
+.cd-num{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--teal);line-height:1;}
 .cd-unit{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
 .coin-visual{display:flex;align-items:center;justify-content:center;position:relative;}
-.coin-img{width:300px;height:300px;border-radius:50%;object-fit:cover;animation:coinFloat 4s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(0,229,200,0.45)) drop-shadow(0 0 80px rgba(0,229,200,0.2));position:relative;z-index:2;}
+.coin-img{width:300px;height:300px;border-radius:50%;object-fit:cover;animation:coinFloat 4s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(0,229,200,0.45));position:relative;z-index:2;}
 .ring{position:absolute;border-radius:50%;border:1px solid rgba(0,229,200,0.12);animation:ringPulse 3s ease-in-out infinite;}
 .ring1{width:340px;height:340px;}
 .ring2{width:390px;height:390px;animation-delay:0.6s;border-color:rgba(0,229,200,0.06);}
@@ -45,12 +45,12 @@ header{display:flex;align-items:center;justify-content:space-between;padding:1re
 .form-full{grid-column:1/-1;}
 label{display:block;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:6px;}
 .opt{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:rgba(0,229,200,0.5);background:rgba(0,229,200,0.08);border:1px solid rgba(0,229,200,0.2);border-radius:4px;padding:2px 7px;margin-left:6px;vertical-align:middle;}
-input,select{width:100%;background:rgba(0,229,200,0.04);border:1px solid rgba(0,229,200,0.15);border-radius:8px;padding:12px 14px;color:var(--text);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;}
+input,select{width:100%;background:rgba(0,229,200,0.04);border:1px solid rgba(0,229,200,0.15);border-radius:8px;padding:12px 14px;color:var(--text);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
 input:focus,select:focus{border-color:rgba(0,229,200,0.5);background:rgba(0,229,200,0.07);}
 input::placeholder{color:rgba(228,238,240,0.2);}
 select option{background:#0b1318;color:#e4eef0;}
 .field-note{font-size:11px;color:rgba(0,229,200,0.45);margin-top:6px;line-height:1.5;}
-.field-hint{font-size:11px;color:rgba(0,229,200,0.6);margin-top:6px;line-height:1.5;font-style:italic;}
+.field-hint{font-size:11px;color:rgba(0,229,200,0.6);margin-top:6px;font-style:italic;}
 .submit-btn{width:100%;margin-top:1.75rem;padding:16px;background:var(--teal);color:#050a0e;border:none;border-radius:10px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;cursor:pointer;transition:transform 0.15s,box-shadow 0.2s;box-shadow:0 0 30px rgba(0,229,200,0.2);}
 .submit-btn:hover{transform:translateY(-2px);box-shadow:0 0 50px rgba(0,229,200,0.4);}
 .submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
@@ -64,7 +64,7 @@ select option{background:#0b1318;color:#e4eef0;}
 .contact-section{padding:3rem 2.5rem;text-align:center;border-top:1px solid rgba(0,229,200,0.08);}
 footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);font-size:12px;color:rgba(228,238,240,0.25);}
 @keyframes livePulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.6);opacity:0.4;}}
-@keyframes coinFloat{0%,100%{transform:translateY(0) rotateY(0deg);}30%{transform:translateY(-12px) rotateY(15deg);}60%{transform:translateY(6px) rotateY(-10deg);}}
+@keyframes coinFloat{0%,100%{transform:translateY(0);}30%{transform:translateY(-12px);}60%{transform:translateY(6px);}}
 @keyframes ringPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.04);opacity:0.4;}}
 @media(max-width:700px){.hero{grid-template-columns:1fr;gap:2rem;padding:3rem 1.25rem 2rem;}.coin-visual{display:none;}.form-grid{grid-template-columns:1fr;}header{padding:1rem 1.25rem;}}
 </style>
@@ -92,9 +92,10 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
     <div class="hero-left">
       <h1>A <span>Smarter</span> Way To<br>Build Your<br>Parlays</h1>
       <p>Get early access to SafeParlay, the crypto powered parlay platform built for real players. Secure your spot before launch.</p>
+
       <div class="counter-block">
         <div class="pulse-dot"></div>
-        <div class="counter-inner">
+        <div>
           <div class="label">Members Signed Up</div>
           <div class="count-row">
             <span id="member-count">0</span>
@@ -102,6 +103,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
           </div>
         </div>
       </div>
+
       <div class="cd-label">Launching in</div>
       <div class="countdown">
         <div class="cd-block"><div class="cd-num" id="cd-days">00</div><div class="cd-unit">Days</div></div>
@@ -110,6 +112,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
         <div class="cd-block"><div class="cd-num" id="cd-secs">00</div><div class="cd-unit">Secs</div></div>
       </div>
     </div>
+
     <div class="coin-visual">
       <div class="ring ring3"></div>
       <div class="ring ring2"></div>
@@ -149,26 +152,26 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
           <label>Timezone</label>
           <select id="f-tz">
             <option value="" disabled selected>Select your timezone</option>
-            <option>EST — Eastern</option>
-            <option>CST — Central</option>
-            <option>MST — Mountain</option>
-            <option>PST — Pacific</option>
-            <option>GMT — London</option>
-            <option>CET — Europe</option>
-            <option>JST — Japan</option>
-            <option>AEST — Australia</option>
+            <option>EST - Eastern</option>
+            <option>CST - Central</option>
+            <option>MST - Mountain</option>
+            <option>PST - Pacific</option>
+            <option>GMT - London</option>
+            <option>CET - Europe</option>
+            <option>JST - Japan</option>
+            <option>AEST - Australia</option>
             <option>Other</option>
           </select>
         </div>
         <div class="form-full">
           <label>Do you currently have a crypto wallet? <span class="opt">Optional</span></label>
           <select id="f-wallet">
-            <option value="" selected>Select an option</option>
+            <option value="">Select an option</option>
             <option value="yes">Yes, I have a crypto wallet</option>
             <option value="no">No, I do not have one yet</option>
             <option value="setting-up">I am in the process of setting one up</option>
           </select>
-          <div class="field-note">A crypto wallet will be required to participate on the platform. You can still reserve your spot now and set one up before launch.</div>
+          <div class="field-note">A crypto wallet will be required to participate. You can still reserve your spot now and set one up before launch.</div>
         </div>
         <div class="form-full">
           <label>How do you plan to use SafeParlay? <span class="opt">Required</span></label>
@@ -199,7 +202,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
     <div class="success-box" id="sp-success">
       <div class="success-icon">&#10003;</div>
       <h3>You are on the list!</h3>
-      <p>Watch your inbox — you will get your exclusive access email 48 hours before launch on April 30th.</p>
+      <p>Watch your inbox. You will get your exclusive access email 48 hours before launch on April 30th.</p>
     </div>
   </div>
 </div>
@@ -207,108 +210,140 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
 <div class="presale-section">
   <div class="presale-inner">
     <div style="font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:0.75rem;">Presale Now Live</div>
-    <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.05;letter-spacing:2px;margin-bottom:1rem;">Get <span style="color:#00e5c8;text-shadow:0 0 20px rgba(0,229,200,0.5);">50% Bonus</span><br>On Your Commitment</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.05;letter-spacing:2px;margin-bottom:1rem;">Get <span style="color:#00e5c8;">50% Bonus</span><br>On Your Commitment</div>
     <p style="font-size:14px;color:rgba(228,238,240,0.6);line-height:1.75;margin-bottom:1.75rem;">Early believers get rewarded. Head over to our presale page at safeparlay.io and lock in your position today. Every presale participant receives a 50% bonus on top of their commitment when the platform launches.</p>
-    <a href="https://safeparlay.io" target="_blank" style="display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 32px;border-radius:10px;text-decoration:none;box-shadow:0 0 30px rgba(0,229,200,0.25);">Participate in Presale &rarr;</a>
+    <a href="https://safeparlay.io" target="_blank" style="display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 32px;border-radius:10px;text-decoration:none;">Participate in Presale &rarr;</a>
   </div>
 </div>
 
 <div class="contact-section">
   <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:#fff;margin-bottom:0.5rem;">Have <span style="color:#00e5c8;">Questions?</span></div>
   <p style="font-size:14px;color:rgba(228,238,240,0.5);margin-bottom:1.5rem;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto;">Our team is here to help. Send us an email and we will get back to you as soon as possible.</p>
-  <a href="/cdn-cgi/l/email-protection#166273777b56657770736677647a776f387f79" style="display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 36px;border-radius:10px;text-decoration:none;box-shadow:0 0 30px rgba(0,229,200,0.2);">Email Us &rarr;</a>
+  <a href="mailto:team@safeparlay.io" style="display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 36px;border-radius:10px;text-decoration:none;">Email Us &rarr;</a>
 </div>
 
 <footer>
   &copy; 2026 SafeParlay. All rights reserved. &bull; Built for early members.
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-var SUPABASE_URL='https://kcziamysopdhmbvcdozq.supabase.co';
-var SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtjemlhbXlzb3BkaG1idmNkb3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM4NzYzNzYsImV4cCI6MjA1OTQ1MjM3Nn0.HKUGFTiGSaEBHQJUUYOBOIYkM5V2E0v_8JxaEosBIaU';
+<script>
+var SUPABASE_URL = 'https://kcziamysopdhmbvcdozq.supabase.co';
+var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtjemlhbXlzb3BkaG1idmNkb3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM4NzYzNzYsImV4cCI6MjA1OTQ1MjM3Nn0.HKUGFTiGSaEBHQJUUYOBOIYkM5V2E0v_8JxaEosBIaU';
 
-function pad(n){return String(n).padStart(2,'0');}
-function updateCountdown(){
-  var launch=new Date('2026-04-30T00:00:00');
-  var now=new Date();
-  var diff=launch-now;
-  if(diff<=0){['days','hours','mins','secs'].forEach(function(u){document.getElementById('cd-'+u).textContent='00';});return;}
-  document.getElementById('cd-days').textContent=pad(Math.floor(diff/86400000));
-  document.getElementById('cd-hours').textContent=pad(Math.floor((diff%86400000)/3600000));
-  document.getElementById('cd-mins').textContent=pad(Math.floor((diff%3600000)/60000));
-  document.getElementById('cd-secs').textContent=pad(Math.floor((diff%60000)/1000));
+// COUNTDOWN TIMER
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function updateCountdown() {
+  var launch = new Date('April 30, 2026 00:00:00');
+  var now = new Date();
+  var diff = launch.getTime() - now.getTime();
+  if (diff <= 0) {
+    document.getElementById('cd-days').textContent = '00';
+    document.getElementById('cd-hours').textContent = '00';
+    document.getElementById('cd-mins').textContent = '00';
+    document.getElementById('cd-secs').textContent = '00';
+    return;
+  }
+  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  var secs = Math.floor((diff % (1000 * 60)) / 1000);
+  document.getElementById('cd-days').textContent = pad(days);
+  document.getElementById('cd-hours').textContent = pad(hours);
+  document.getElementById('cd-mins').textContent = pad(mins);
+  document.getElementById('cd-secs').textContent = pad(secs);
 }
-updateCountdown();
-setInterval(updateCountdown,1000);
 
-async function updateMemberCount(){
-  try{
-    var res=await fetch(SUPABASE_URL+'/rest/v1/signups?select=*&head=true',{
-      method:'HEAD',
-      headers:{
-        'apikey':SUPABASE_KEY,
-        'Authorization':'Bearer '+SUPABASE_KEY,
-        'Prefer':'count=exact'
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// MEMBER COUNTER
+async function updateMemberCount() {
+  try {
+    var res = await fetch(SUPABASE_URL + '/rest/v1/signups?select=id', {
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY
       }
     });
-    if(res.ok){
-      var range=res.headers.get('content-range');
-      if(range){
-        var total=range.split('/')[1];
-        if(total && total!=='*'){
-          document.getElementById('member-count').textContent=parseInt(total).toLocaleString();
-          return;
-        }
-      }
+    if (res.ok) {
+      var data = await res.json();
+      document.getElementById('member-count').textContent = data.length.toLocaleString();
     }
-    var res2=await fetch(SUPABASE_URL+'/rest/v1/signups?select=id',{
-      headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}
-    });
-    if(res2.ok){
-      var data=await res2.json();
-      document.getElementById('member-count').textContent=data.length.toLocaleString();
-    }
-  }catch(e){
-    document.getElementById('member-count').textContent='0';
+  } catch(e) {
+    document.getElementById('member-count').textContent = '0';
   }
 }
+
 updateMemberCount();
-setInterval(updateMemberCount,30000);
+setInterval(updateMemberCount, 30000);
 
-async function submitForm(){
-  var fname=document.getElementById('f-fname').value.trim();
-  var lname=document.getElementById('f-lname').value.trim();
-  var email=document.getElementById('f-email').value.trim();
-  var user=document.getElementById('f-user').value.trim();
-  var wallet=document.getElementById('f-wallet').value;
-  var age=document.getElementById('f-age').value;
-  var usage=document.getElementById('f-usage').value;
-  var tz=document.getElementById('f-tz').value;
-  var country=document.getElementById('f-country').value.trim();
-  var referral=document.getElementById('f-referral').value.trim();
+// FORM SUBMIT
+async function submitForm() {
+  var fname = document.getElementById('f-fname').value.trim();
+  var lname = document.getElementById('f-lname').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var user = document.getElementById('f-user').value.trim();
+  var wallet = document.getElementById('f-wallet').value;
+  var age = document.getElementById('f-age').value;
+  var usage = document.getElementById('f-usage').value;
+  var tz = document.getElementById('f-tz').value;
+  var country = document.getElementById('f-country').value.trim();
+  var referral = document.getElementById('f-referral').value.trim();
 
-  if(!fname||!email||!user||!usage||!age){alert('Please complete all required fields to continue.');return;}
-  if(age==='no'){alert('Sorry, you must be at least 18 years old to join SafeParlay.');return;}
+  if (!fname || !email || !user || !usage || !age) {
+    alert('Please complete all required fields to continue.');
+    return;
+  }
+  if (age === 'no') {
+    alert('Sorry, you must be at least 18 years old to join SafeParlay.');
+    return;
+  }
 
-  var btn=document.querySelector('.submit-btn');
-  btn.textContent='Securing your spot...';
-  btn.disabled=true;
+  var btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Securing your spot...';
+  btn.disabled = true;
 
-  try{
-    var dbRes=await fetch(SUPABASE_URL+'/rest/v1/signups',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Prefer':'return=minimal'},
-      body:JSON.stringify({first_name:fname,last_name:lname,email:email,username:user,timezone:tz,country:country,crypto_wallet:wallet,how_use_safeparlay:usage,age_confirmed:true,referred_by:referral})
+  try {
+    var dbRes = await fetch(SUPABASE_URL + '/rest/v1/signups', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        first_name: fname,
+        last_name: lname,
+        email: email,
+        username: user,
+        timezone: tz,
+        country: country,
+        crypto_wallet: wallet,
+        how_use_safeparlay: usage,
+        age_confirmed: true,
+        referred_by: referral
+      })
     });
-    if(!dbRes.ok){var err=await dbRes.text();console.error('DB error:',err);}
-  }catch(e){console.error('DB error:',e);}
+    if (!dbRes.ok) { console.error('DB error:', await dbRes.text()); }
+  } catch(e) { console.error('DB error:', e); }
 
-  try{
-    await fetch(SUPABASE_URL+'/functions/v1/send-welcome-email',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':'Bearer '+SUPABASE_KEY},
-      body:JSON.stringify({email:email,first_name:fname})
+  try {
+    await fetch(SUPABASE_URL + '/functions/v1/send-welcome-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY
+      },
+      body: JSON.stringify({ email: email, first_name: fname })
     });
-  }catch(e){console.error('Email error:',e);}
+  } catch(e) { console.error('Email error:', e); }
 
-  document.getElementBy
+  document.getElementById('sp-form').style.display = 'none';
+  document.getElementById('sp-success').style.display = 'block';
+  updateMemberCount();
+}
+</script>
+</body>
+</html>
