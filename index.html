@@ -10,7 +10,6 @@
 :root{--teal:#00e5c8;--bg:#050a0e;--bg2:#0b1318;--text:#e4eef0;--muted:rgba(228,238,240,0.5);}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
 header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;border-bottom:1px solid rgba(0,229,200,0.1);background:rgba(5,10,14,0.97);position:sticky;top:0;z-index:100;}
-.logo-area{display:flex;align-items:center;gap:14px;}
 .brand{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:var(--teal);text-shadow:0 0 18px rgba(0,229,200,0.5);}
 .launch-badge{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(0,229,200,0.3);border-radius:20px;padding:6px 16px;background:rgba(0,229,200,0.06);}
 .presale-bar{background:linear-gradient(90deg,rgba(0,229,200,0.12),rgba(0,229,200,0.06),rgba(0,229,200,0.12));border-bottom:1px solid rgba(0,229,200,0.2);padding:12px 2rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
@@ -25,11 +24,12 @@ header{display:flex;align-items:center;justify-content:space-between;padding:1re
 .cd-block{text-align:center;background:rgba(0,229,200,0.05);border:1px solid rgba(0,229,200,0.2);border-radius:10px;padding:12px 16px;min-width:68px;}
 .cd-num{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--teal);line-height:1;}
 .cd-unit{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
-.coin-visual{display:flex;align-items:center;justify-content:center;position:relative;}
+.coin-visual{display:flex;align-items:center;justify-content:center;position:relative;height:400px;}
 .ring{position:absolute;border-radius:50%;border:1px solid rgba(0,229,200,0.12);animation:ringPulse 3s ease-in-out infinite;}
-.ring1{width:340px;height:340px;}
-.ring2{width:390px;height:390px;animation-delay:0.6s;border-color:rgba(0,229,200,0.06);}
-.ring3{width:440px;height:440px;animation-delay:1.2s;border-color:rgba(0,229,200,0.03);}
+.ring1{width:300px;height:300px;}
+.ring2{width:360px;height:360px;animation-delay:0.6s;border-color:rgba(0,229,200,0.07);}
+.ring3{width:420px;height:420px;animation-delay:1.2s;border-color:rgba(0,229,200,0.03);}
+.coin-center{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,rgba(0,229,200,0.15),rgba(0,229,200,0.03));border:1px solid rgba(0,229,200,0.3);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--teal);}
 .form-section{background:var(--bg2);border-top:1px solid rgba(0,229,200,0.08);border-bottom:1px solid rgba(0,229,200,0.08);padding:4rem 2.5rem;}
 .form-inner{max-width:640px;margin:0 auto;}
 .section-title{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:2px;color:#fff;margin-bottom:0.4rem;}
@@ -49,34 +49,39 @@ select option{background:#0b1318;color:#e4eef0;}
 .submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
 .privacy{font-size:12px;color:rgba(228,238,240,0.3);text-align:center;margin-top:12px;}
 .error-box{display:none;background:rgba(255,80,80,0.08);border:1px solid rgba(255,80,80,0.3);border-radius:10px;padding:14px 18px;margin-top:14px;font-size:13px;color:#ff9999;line-height:1.6;}
-.success-box{display:none;text-align:center;padding:2.5rem 1.5rem;background:rgba(0,229,200,0.06);border:1px solid rgba(0,229,200,0.25);border-radius:14px;margin-top:1rem;}
+.success-box{display:none;text-align:center;padding:2.5rem 1.5rem;background:rgba(0,229,200,0.06);border:1px solid rgba(0,229,200,0.25);border-radius:14px;}
 .success-icon{font-size:48px;color:var(--teal);margin-bottom:0.75rem;line-height:1;}
 .success-box h3{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--teal);margin-bottom:0.5rem;}
 .success-box p{font-size:14px;color:var(--muted);}
-.presale-section{padding:4rem 2.5rem;max-width:1140px;margin:0 auto;}
+.presale-section{padding:4rem 2.5rem;}
 .presale-inner{background:rgba(0,229,200,0.05);border:1px solid rgba(0,229,200,0.2);border-radius:16px;padding:3rem 2.5rem;max-width:640px;margin:0 auto;}
 .contact-section{padding:3rem 2.5rem;text-align:center;border-top:1px solid rgba(0,229,200,0.08);}
 footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);font-size:12px;color:rgba(228,238,240,0.25);}
+.teal-btn{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 32px;border-radius:10px;text-decoration:none;}
 @keyframes livePulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.6);opacity:0.4;}}
-@keyframes ringPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.04);opacity:0.4;}}
-@media(max-width:700px){.hero{grid-template-columns:1fr;gap:2rem;padding:3rem 1.25rem 2rem;}.coin-visual{display:none;}.form-grid{grid-template-columns:1fr;}header{padding:1rem 1.25rem;}}
+@keyframes ringPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.04);opacity:0.5;}}
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr;padding:3rem 1.25rem 2rem;}
+  .coin-visual{display:none;}
+  .form-grid{grid-template-columns:1fr;}
+  header{padding:1rem 1.25rem;}
+  .form-section,.presale-section,.contact-section{padding:3rem 1.25rem;}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo-area">
-    <div class="brand">SafeParlay</div>
-  </div>
+  <div class="brand">SafeParlay</div>
   <div class="launch-badge">Launching April 30</div>
 </header>
 
 <div class="presale-bar">
   <div style="display:flex;align-items:center;gap:8px;">
     <div class="pulse-dot"></div>
-    <span style="font-size:13px;color:rgba(228,238,240,0.9);"><strong style="color:#00e5c8;">Presale Live Now</strong> &mdash; Get <strong style="color:#00e5c8;">50% bonus</strong> on top of your presale commitment</span>
+    <span style="font-size:13px;color:rgba(228,238,240,0.9);"><strong style="color:#00e5c8;">Presale Live Now</strong> &mdash; Get <strong style="color:#00e5c8;">50% bonus</strong> on your presale commitment</span>
   </div>
-  <a href="https://safeparlay.io" target="_blank" style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:7px 20px;border-radius:6px;text-decoration:none;white-space:nowrap;">Join Presale &rarr;</a>
+  <a href="https://safeparlay.io" target="_blank" style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:7px 18px;border-radius:6px;text-decoration:none;white-space:nowrap;">Join Presale &rarr;</a>
 </div>
 
 <div style="max-width:1140px;margin:0 auto;">
@@ -84,6 +89,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
     <div class="hero-left">
       <h1>A <span>Smarter</span> Way To<br>Build Your<br>Parlays</h1>
       <p>Get early access to SafeParlay, the crypto powered parlay platform built for real players. Secure your spot before launch.</p>
+
       <div class="counter-block">
         <div class="pulse-dot"></div>
         <div>
@@ -94,6 +100,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
           </div>
         </div>
       </div>
+
       <div class="cd-label">Launching in</div>
       <div class="countdown">
         <div class="cd-block"><div class="cd-num" id="cd-days">00</div><div class="cd-unit">Days</div></div>
@@ -102,10 +109,12 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
         <div class="cd-block"><div class="cd-num" id="cd-secs">00</div><div class="cd-unit">Secs</div></div>
       </div>
     </div>
+
     <div class="coin-visual">
       <div class="ring ring3"></div>
       <div class="ring ring2"></div>
       <div class="ring ring1"></div>
+      <div class="coin-center">SP</div>
     </div>
   </div>
 </div>
@@ -134,17 +143,17 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
           <input type="text" id="f-user" placeholder="yourhandle"/>
         </div>
         <div class="form-full">
-          <label>Do you currently have a crypto wallet? <span class="opt">Optional</span></label>
+          <label>Do you have a crypto wallet? <span class="opt">Optional</span></label>
           <select id="f-wallet">
             <option value="">Select an option</option>
-            <option value="yes">Yes, I have a crypto wallet</option>
-            <option value="no">No, I do not have one yet</option>
-            <option value="setting-up">I am in the process of setting one up</option>
+            <option value="yes">Yes, I have one</option>
+            <option value="no">No, not yet</option>
+            <option value="setting-up">Setting one up</option>
           </select>
-          <div class="field-note">A crypto wallet will be required to participate. You can still reserve your spot now and set one up before launch.</div>
+          <div class="field-note">A crypto wallet will be required to participate. You can still reserve your spot and set one up before launch.</div>
         </div>
         <div class="form-full">
-          <label>Are you at least 18 years of age? <span class="opt">Required</span></label>
+          <label>Are you at least 18 years old? <span class="opt">Required</span></label>
           <select id="f-age">
             <option value="" disabled selected>Select an option</option>
             <option value="yes">Yes, I am 18 or older</option>
@@ -152,6 +161,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
           </select>
         </div>
       </div>
+
       <button class="submit-btn" id="submit-btn" onclick="submitForm()">Secure My Spot &rarr;</button>
       <div class="error-box" id="error-box"></div>
       <div class="privacy">Your information is encrypted and will never be sold or shared.</div>
@@ -169,114 +179,104 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
   <div class="presale-inner">
     <div style="font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(0,229,200,0.6);margin-bottom:0.75rem;">Presale Now Live</div>
     <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,52px);color:#fff;line-height:1.05;letter-spacing:2px;margin-bottom:1rem;">Get <span style="color:#00e5c8;">50% Bonus</span><br>On Your Commitment</div>
-    <p style="font-size:14px;color:rgba(228,238,240,0.6);line-height:1.75;margin-bottom:1.75rem;">Early believers get rewarded. Head over to our presale page at safeparlay.io and lock in your position today. Every presale participant receives a 50% bonus on top of their commitment when the platform launches.</p>
-    <a href="https://safeparlay.io" target="_blank" style="display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 32px;border-radius:10px;text-decoration:none;">Participate in Presale &rarr;</a>
+    <p style="font-size:14px;color:rgba(228,238,240,0.6);line-height:1.75;margin-bottom:1.75rem;">Early believers get rewarded. Head over to our presale page and lock in your position today. Every presale participant receives a 50% bonus on top of their commitment when the platform launches.</p>
+    <a href="https://safeparlay.io" target="_blank" class="teal-btn">Participate in Presale &rarr;</a>
   </div>
 </div>
 
 <div class="contact-section">
   <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:#fff;margin-bottom:0.5rem;">Have <span style="color:#00e5c8;">Questions?</span></div>
   <p style="font-size:14px;color:rgba(228,238,240,0.5);margin-bottom:1.5rem;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto;">Our team is here to help. Send us an email and we will get back to you as soon as possible.</p>
-  <a href="mailto:team@safeparlay.io" style="display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#050a0e;background:#00e5c8;padding:14px 36px;border-radius:10px;text-decoration:none;">Email Us &rarr;</a>
+  <a href="mailto:team@safeparlay.io" class="teal-btn">Email Us &rarr;</a>
 </div>
 
-<footer>
-  &copy; 2026 SafeParlay. All rights reserved. &bull; Built for early members.
-</footer>
+<footer>&copy; 2026 SafeParlay. All rights reserved. &bull; Built for early members.</footer>
 
 <script>
 // ─── CONFIG ───────────────────────────────────────────────
-var SUPA_URL  = 'https://kcziamysopdhmbvcdozq.supabase.co';
-var SUPA_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtjemlhbXlzb3BkaG1idmNkb3pxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM4NzYzNzYsImV4cCI6MjA1OTQ1MjM3Nn0.HKUGFTiGSaEBHQJUUYOBOIYkM5V2E0v_8JxaEosBIaU';
-var RESEND_KEY = 're_eVVcYTmG_juv8qHPhU2vQpb8iQAjwqjHb';
+var SUPA_URL      = 'https://bdboqutlenobvnaptekr.supabase.co';
+var SUPA_KEY      = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkYm9xdXRsZW5vYnZuYXB0ZWtyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2NTc4NzAsImV4cCI6MjA5MTIzMzg3MH0.2HSdC57COy90ddq12ZYX4kq69G2iPGbocSBfKA5n90w';
+var EDGE_FN_URL   = 'https://bdboqutlenobvnaptekr.supabase.co/functions/v1/super-processor';
 // ──────────────────────────────────────────────────────────
 
 var memberCount = 0;
 
-// Shared headers for every Supabase REST call
-function supaHeaders(extra) {
-  var h = {
-    'apikey':        SUPA_KEY,
-    'Authorization': 'Bearer ' + SUPA_KEY,
-    'Content-Type':  'application/json'
-  };
-  if (extra) {
-    for (var k in extra) h[k] = extra[k];
-  }
-  return h;
-}
-
-// ─── HELPERS ──────────────────────────────────────────────
-function pad(n) { return String(n).padStart(2, '0'); }
-
-function showError(msg) {
-  var box = document.getElementById('error-box');
-  box.textContent = msg;
-  box.style.display = 'block';
-  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function hideError() {
-  var box = document.getElementById('error-box');
-  box.style.display = 'none';
-  box.textContent = '';
-}
-
-function setBtn(text, disabled) {
-  var btn = document.getElementById('submit-btn');
-  btn.textContent = text;
-  btn.disabled = disabled;
-}
-
 // ─── COUNTDOWN ────────────────────────────────────────────
-function updateCountdown() {
+function pad(n){ return String(n).padStart(2,'0'); }
+
+function updateCountdown(){
   var diff = new Date('April 30, 2026 00:00:00').getTime() - Date.now();
-  if (diff <= 0) { diff = 0; }
-  document.getElementById('cd-days').textContent  = pad(Math.floor(diff / 86400000));
-  document.getElementById('cd-hours').textContent = pad(Math.floor((diff % 86400000) / 3600000));
-  document.getElementById('cd-mins').textContent  = pad(Math.floor((diff % 3600000) / 60000));
-  document.getElementById('cd-secs').textContent  = pad(Math.floor((diff % 60000) / 1000));
+  if(diff < 0) diff = 0;
+  document.getElementById('cd-days').textContent  = pad(Math.floor(diff/86400000));
+  document.getElementById('cd-hours').textContent = pad(Math.floor((diff%86400000)/3600000));
+  document.getElementById('cd-mins').textContent  = pad(Math.floor((diff%3600000)/60000));
+  document.getElementById('cd-secs').textContent  = pad(Math.floor((diff%60000)/1000));
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
 // ─── MEMBER COUNT ─────────────────────────────────────────
-// Uses plain fetch with a HEAD request + Prefer: count=exact.
-// Supabase returns the row count in the Content-Range header, e.g. "0-24/47"
-// No Supabase JS client needed — avoids the DataCloneError completely.
-async function loadMemberCount() {
+// Plain HEAD request to Supabase REST API.
+// No JS client — avoids DataCloneError entirely.
+// Count is returned in the Content-Range header: "0-24/47"
+async function loadMemberCount(){
   try {
     var res = await fetch(SUPA_URL + '/rest/v1/signups?select=id', {
-      method:  'HEAD',
-      headers: supaHeaders({ 'Prefer': 'count=exact' })
+      method: 'HEAD',
+      headers: {
+        'apikey':        SUPA_KEY,
+        'Authorization': 'Bearer ' + SUPA_KEY,
+        'Prefer':        'count=exact'
+      }
     });
 
-    if (!res.ok) {
+    if(!res.ok){
       console.warn('[Count] HTTP ' + res.status);
       document.getElementById('member-count').textContent = '0';
       return;
     }
 
-    var range = res.headers.get('content-range'); // e.g. "0-24/47"
+    var range = res.headers.get('content-range'); // "0-24/47"
     console.log('[Count] Content-Range:', range);
 
-    if (range && range.indexOf('/') !== -1) {
+    if(range && range.indexOf('/') !== -1){
       memberCount = parseInt(range.split('/')[1], 10) || 0;
     }
-
     document.getElementById('member-count').textContent = memberCount.toLocaleString();
-  } catch (e) {
+  } catch(e){
     console.warn('[Count] Exception:', e.message);
     document.getElementById('member-count').textContent = '0';
   }
 }
 loadMemberCount();
 
-// ─── SUBMIT FORM ──────────────────────────────────────────
-async function submitForm() {
+// ─── UI HELPERS ───────────────────────────────────────────
+function showError(msg){
+  var box = document.getElementById('error-box');
+  box.textContent = msg;
+  box.style.display = 'block';
+  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function hideError(){
+  var box = document.getElementById('error-box');
+  box.style.display = 'none';
+  box.textContent = '';
+}
+function setBtn(text, disabled){
+  var btn = document.getElementById('submit-btn');
+  btn.textContent = text;
+  btn.disabled = disabled;
+}
+function showSuccessScreen(){
+  document.getElementById('sp-form').style.display = 'none';
+  document.getElementById('sp-success').style.display = 'block';
+  document.getElementById('sp-success').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+// ─── SUBMIT ───────────────────────────────────────────────
+async function submitForm(){
   hideError();
 
-  // 1. Read values
   var fname  = document.getElementById('f-fname').value.trim();
   var lname  = document.getElementById('f-lname').value.trim();
   var email  = document.getElementById('f-email').value.trim();
@@ -284,144 +284,94 @@ async function submitForm() {
   var wallet = document.getElementById('f-wallet').value;
   var age    = document.getElementById('f-age').value;
 
-  // 2. Validate
-  if (!fname)  { showError('Please enter your first name.'); return; }
-  if (!email)  { showError('Please enter your email address.'); return; }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
-  if (!user)   { showError('Please choose a desired username.'); return; }
-  if (!age)    { showError('Please confirm your age to continue.'); return; }
-  if (age === 'no') { showError('Sorry, you must be at least 18 years old to join SafeParlay.'); return; }
+  // Validate
+  if(!fname)  { showError('Please enter your first name.'); return; }
+  if(!email)  { showError('Please enter your email address.'); return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
+  if(!user)   { showError('Please choose a desired username.'); return; }
+  if(!age)    { showError('Please confirm your age to continue.'); return; }
+  if(age==='no') { showError('Sorry, you must be at least 18 years old to join SafeParlay.'); return; }
 
   setBtn('Securing your spot...', true);
 
-  // 3. Build payload
-  var payload = {
-    first_name:    fname,
-    last_name:     lname,
-    email:         email,
-    username:      user,
-    crypto_wallet: wallet || null,
-    age_confirmed: true
-  };
-
-  console.log('[Submit] Payload:', JSON.stringify(payload));
-
-  // 4. POST to Supabase REST API directly — no JS client
+  // Insert into Supabase via plain fetch — no JS client
   try {
     var res = await fetch(SUPA_URL + '/rest/v1/signups', {
-      method:  'POST',
-      headers: supaHeaders({ 'Prefer': 'return=minimal' }),
-      body:    JSON.stringify(payload)
+      method: 'POST',
+      headers: {
+        'apikey':        SUPA_KEY,
+        'Authorization': 'Bearer ' + SUPA_KEY,
+        'Content-Type':  'application/json',
+        'Prefer':        'return=minimal'
+      },
+      body: JSON.stringify({
+        first_name:    fname,
+        last_name:     lname,
+        email:         email,
+        username:      user,
+        crypto_wallet: wallet || null,
+        age_confirmed: true
+      })
     });
 
     console.log('[Submit] HTTP status:', res.status);
 
-    // 201 = Created, 200 = OK — both mean success
-    if (res.status === 201 || res.status === 200) {
-      console.log('[Submit] Saved successfully!');
+    // Success
+    if(res.status === 201 || res.status === 200){
       memberCount++;
       document.getElementById('member-count').textContent = memberCount.toLocaleString();
-      sendWelcomeEmail(fname, email); // fire and forget
+      sendWelcomeEmail(fname, email);
       showSuccessScreen();
       return;
     }
 
-    // Any other status = error — read the body for details
+    // Read error body
     var body = {};
-    try { body = await res.json(); } catch(e) {}
-    console.error('[Submit] Error body:', JSON.stringify(body));
+    try { body = await res.json(); } catch(e){}
+    console.error('[Submit] Error:', JSON.stringify(body));
 
     var msg  = body.message || body.error || body.details || ('HTTP ' + res.status);
-    var code = body.code || String(res.status);
+    var code = String(body.code || res.status);
 
-    // Duplicate entry — already signed up, show success anyway
-    if (res.status === 409 || code === '23505' || msg.toLowerCase().indexOf('duplicate') !== -1 || msg.toLowerCase().indexOf('unique') !== -1) {
-      console.log('[Submit] Duplicate — already registered, showing success.');
+    // Duplicate — already signed up
+    if(res.status === 409 || code === '23505'){
       showSuccessScreen();
       return;
     }
 
-    // RLS / permission blocked
-    if (res.status === 403 || code === '42501') {
-      showError('Permission denied by database. Make sure your Supabase "signups" table has an INSERT policy enabled for the anon role. Error: ' + msg);
+    // RLS blocking
+    if(res.status === 401 || res.status === 403){
+      showError('Permission error — please contact team@safeparlay.io. (Error: ' + msg + ')');
       setBtn('Secure My Spot \u2192', false);
       return;
     }
 
-    // Table doesn't exist
-    if (code === '42P01' || msg.toLowerCase().indexOf('does not exist') !== -1) {
-      showError('Database table not found. Check that your "signups" table exists in Supabase. Error: ' + msg);
-      setBtn('Secure My Spot \u2192', false);
-      return;
-    }
-
-    // Generic fallback
-    showError('Could not save your info. Please try again or email team@safeparlay.io — Error: ' + msg);
+    showError('Something went wrong. Please try again or email team@safeparlay.io. (Error: ' + msg + ')');
     setBtn('Secure My Spot \u2192', false);
 
-  } catch (e) {
-    console.error('[Submit] Network exception:', e.message);
-    showError('Network error. Please check your connection and try again. (' + e.message + ')');
+  } catch(e){
+    console.error('[Submit] Network error:', e.message);
+    showError('Network error. Please check your connection and try again.');
     setBtn('Secure My Spot \u2192', false);
   }
 }
 
-// ─── SUCCESS SCREEN ───────────────────────────────────────
-function showSuccessScreen() {
-  document.getElementById('sp-form').style.display = 'none';
-  document.getElementById('sp-success').style.display = 'block';
-  document.getElementById('sp-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-// ─── WELCOME EMAIL ────────────────────────────────────────
-async function sendWelcomeEmail(fname, email) {
+// ─── WELCOME EMAIL via Edge Function ──────────────────────
+async function sendWelcomeEmail(fname, email){
   try {
-    var res = await fetch('https://api.resend.com/emails', {
-      method:  'POST',
+    var res = await fetch(EDGE_FN_URL, {
+      method: 'POST',
       headers: {
         'Content-Type':  'application/json',
-        'Authorization': 'Bearer ' + RESEND_KEY
+        'Authorization': 'Bearer ' + SUPA_KEY
       },
-      body: JSON.stringify({
-        from:    'SafeParlay <noreply@safeparlay.io>',
-        to:      [email],
-        subject: "You're In - Welcome to SafeParlay!",
-        html:    buildEmailHTML(fname)
-      })
+      body: JSON.stringify({ first_name: fname, email: email })
     });
     var json = await res.json();
-    console.log('[Email] Resend response:', JSON.stringify(json));
-  } catch (e) {
+    console.log('[Email] Edge Function response:', JSON.stringify(json));
+  } catch(e){
     console.warn('[Email] Non-fatal error:', e.message);
   }
-}
-
-// ─── EMAIL TEMPLATE ───────────────────────────────────────
-function buildEmailHTML(fname) {
-  return [
-    '<div style="font-family:Arial,sans-serif;background:#050a0e;padding:40px 20px;">',
-    '<div style="max-width:600px;margin:0 auto;background:#0b1318;border:1px solid rgba(0,229,200,0.2);border-radius:16px;padding:48px 40px;text-align:center;">',
-    '<p style="color:#00e5c8;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;">You Are In</p>',
-    '<h1 style="color:#fff;font-size:36px;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">Welcome to the <span style="color:#00e5c8;">SafeParlay</span> Family</h1>',
-    '<p style="color:rgba(228,238,240,0.65);font-size:15px;line-height:1.75;margin-bottom:32px;">Hey ' + fname + ', your spot is officially reserved. You are now part of an exclusive group of early members who will be first through the door when we go live.</p>',
-    '<div style="text-align:left;margin-bottom:32px;">',
-    '<p style="color:#fff;font-size:16px;text-transform:uppercase;letter-spacing:2px;font-weight:bold;margin-bottom:20px;">What Happens Next</p>',
-    '<div style="margin-bottom:16px;"><p style="color:#e4eef0;font-weight:bold;margin-bottom:4px;">1 &mdash; Your spot is locked in</p><p style="color:rgba(228,238,240,0.5);font-size:13px;line-height:1.6;">You are on the early access list. No action needed right now.</p></div>',
-    '<div style="margin-bottom:16px;"><p style="color:#e4eef0;font-weight:bold;margin-bottom:4px;">2 &mdash; Watch your inbox 48 hours before launch</p><p style="color:rgba(228,238,240,0.5);font-size:13px;line-height:1.6;">We will send you a secure link to create your password and access the platform the moment we go live on April 30th.</p></div>',
-    '<div><p style="color:#e4eef0;font-weight:bold;margin-bottom:4px;">3 &mdash; Log in and start building</p><p style="color:rgba(228,238,240,0.5);font-size:13px;line-height:1.6;">Connect your crypto wallet and start building smarter parlays from day one.</p></div>',
-    '</div>',
-    '<div style="background:rgba(0,229,200,0.06);border:1px solid rgba(0,229,200,0.2);border-radius:12px;padding:28px 32px;margin-bottom:32px;">',
-    '<p style="color:rgba(0,229,200,0.6);font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;">Do Not Miss This</p>',
-    '<h2 style="color:#fff;font-size:28px;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Get <span style="color:#00e5c8;">50% Bonus</span> On Your Presale</h2>',
-    '<p style="color:rgba(228,238,240,0.55);font-size:13px;line-height:1.7;margin-bottom:20px;">Every presale participant receives a 50% bonus on top of their commitment when the platform launches.</p>',
-    '<a href="https://safeparlay.io" style="display:inline-block;background:#00e5c8;color:#050a0e;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:14px 36px;border-radius:8px;font-weight:bold;">Join the Presale</a>',
-    '</div>',
-    '<p style="color:rgba(228,238,240,0.7);font-size:15px;margin-bottom:8px;">Questions? <a href="mailto:team@safeparlay.io" style="color:#00e5c8;text-decoration:none;">team@safeparlay.io</a></p>',
-    '<p style="color:rgba(228,238,240,0.7);font-size:15px;">See you on launch day.</p>',
-    '<hr style="border:none;border-top:1px solid rgba(0,229,200,0.1);margin:24px 0;"/>',
-    '<p style="color:rgba(228,238,240,0.2);font-size:11px;">&copy; 2026 SafeParlay. All rights reserved.</p>',
-    '</div></div>'
-  ].join('');
 }
 </script>
 </body>
