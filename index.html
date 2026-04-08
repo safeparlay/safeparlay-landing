@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,10 +73,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
 <body>
 
 <header>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <img src="Powered_Coin_Transparent_Background.png" alt="SafeParlay coin" style="width:42px;height:42px;border-radius:50%;object-fit:cover;box-shadow:0 0 12px rgba(0,229,200,0.4);"/>
-    <div class="brand">SafeParlay</div>
-  </div>
+  <div class="brand">SafeParlay</div>
   <div class="launch-badge">Launching April 30</div>
 </header>
 
@@ -190,12 +188,12 @@ footer{text-align:center;padding:2rem;border-top:1px solid rgba(0,229,200,0.08);
 <div class="contact-section">
   <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:#fff;margin-bottom:0.5rem;">Have <span style="color:#00e5c8;">Questions?</span></div>
   <p style="font-size:14px;color:rgba(228,238,240,0.5);margin-bottom:1.5rem;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto;">Our team is here to help. Send us an email and we will get back to you as soon as possible.</p>
-  <a href="/cdn-cgi/l/email-protection#dda9b8bcb09daebcbbb8adbcafb1bca4f3b4b2" class="teal-btn">Email Us &rarr;</a>
+  <a href="mailto:team@safeparlay.io" class="teal-btn">Email Us &rarr;</a>
 </div>
 
 <footer>&copy; 2026 SafeParlay. All rights reserved. &bull; Built for early members.</footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ─── CONFIG ───────────────────────────────────────────────
 var SUPA_URL      = 'https://bdboqutlenobvnaptekr.supabase.co';
 var SUPA_KEY      = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkYm9xdXRsZW5vYnZuYXB0ZWtyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2NTc4NzAsImV4cCI6MjA5MTIzMzg3MH0.2HSdC57COy90ddq12ZYX4kq69G2iPGbocSBfKA5n90w';
@@ -371,4 +369,11 @@ async function sendWelcomeEmail(fname, email){
       body: JSON.stringify({ first_name: fname, email: email })
     });
     var json = await res.json();
-    console.log('[Email] Edg
+    console.log('[Email] Edge Function response:', JSON.stringify(json));
+  } catch(e){
+    console.warn('[Email] Non-fatal error:', e.message);
+  }
+}
+</script>
+</body>
+</html>
